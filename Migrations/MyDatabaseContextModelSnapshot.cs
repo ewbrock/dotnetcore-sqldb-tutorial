@@ -15,18 +15,24 @@ namespace DotNetCoreSqlDb.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.2");
 
-            modelBuilder.Entity("DotNetCoreSqlDb.Models.Todo", b =>
+            modelBuilder.Entity("DotNetCoreSqlDb.Models.Climate", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<int>("ClimateID")
                         .ValueGeneratedOnAdd();
-
-                    b.Property<DateTime>("CreatedDate");
-
+                    b.Property<string>("Name");
                     b.Property<string>("Description");
+                    b.Property<string>("Rain_in_Winter");
+                    b.Property<string>("Rain_during_Growing_Season");
+                    b.Property<string>("Rain_during_Harvest");
+                    b.Property<string>("Temp_in_Winter");                    
+                    b.Property<string>("Temp_during_Growing_Season");
+                    b.Property<string>("Temp_Continentality");                    
+                    b.Property<string>("Temp_Diurnal");                    
+                    b.Property<string>("Vintage_Variation");                    
+                    b.Property<string>("Proximity_to_Large_Bodies_of_Water");                    
+                    b.HasKey("ClimateID");
 
-                    b.HasKey("ID");
-
-                    b.ToTable("Todo");
+                    b.ToTable("Climate");
                 });
         }
     }
