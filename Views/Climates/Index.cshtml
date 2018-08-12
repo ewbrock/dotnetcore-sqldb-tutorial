@@ -1,1 +1,105 @@
+@page
+@model WineTableMaint.Pages.Climates.IndexModel
 
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+
+<form>
+    <p>
+        Name Contains: <input type="text" name="SearchString">
+        <input type="submit" value="Search" />
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Climate[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Climate[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Climate[0].Rain_in_Winter)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Climate[0].Rain_during_Growing_Season)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Climate[0].Rain_during_Harvest)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Climate[0].Temp_in_Winter)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Climate[0].Temp_during_Growing_Season)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Climate[0].Temp_Continentality)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Climate[0].Temp_Diurnal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Climate[0].Vintage_Variation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Climate[0].Proximity_to_Large_Bodies_of_Water)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Climate)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Rain_in_Winter)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Rain_during_Growing_Season)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Rain_during_Harvest)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Temp_in_Winter)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Temp_during_Growing_Season)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Temp_Continentality)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Temp_Diurnal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Vintage_Variation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Proximity_to_Large_Bodies_of_Water)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.ClimateID">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.ClimateID">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.ClimateID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
