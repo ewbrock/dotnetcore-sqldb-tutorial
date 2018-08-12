@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DotNetCoreSql.Models
+namespace DotNetCoreSqlDb.Models
 {
     public class Climate
     {
