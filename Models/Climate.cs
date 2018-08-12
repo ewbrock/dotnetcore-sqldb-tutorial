@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WineTableMaint.Models
+namespace DotNetCoreSql.Models
 {
     public class Climate
     {
