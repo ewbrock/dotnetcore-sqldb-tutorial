@@ -9,22 +9,22 @@ using DotNetCoreSqlDb.Models;
 
 namespace DotNetCoreSqlDb.Controllers
 {
-    public class TodosController : Controller
+    public class ClimatesController : Controller
     {
         private readonly MyDatabaseContext _context;
 
-        public TodosController(MyDatabaseContext context)
+        public ClimatesController(MyDatabaseContext context)
         {
             _context = context;    
         }
 
-        // GET: Todos
+        // GET: Climates
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Todo.ToListAsync());
+            return View(await _context.Climate.ToListAsync());
         }
 
-        // GET: Todos/Details/5
+        // GET: Climates/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -32,39 +32,39 @@ namespace DotNetCoreSqlDb.Controllers
                 return NotFound();
             }
 
-            var todo = await _context.Todo
-                .SingleOrDefaultAsync(m => m.ID == id);
-            if (todo == null)
+            var climate = await _context.Todo
+                .SingleOrDefaultAsync(m => m.ClimateID == id);
+            if (climate == null)
             {
                 return NotFound();
             }
 
-            return View(todo);
+            return View(climate);
         }
 
-        // GET: Todos/Create
+        // GET: Climates/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Todos/Create
+        // POST: Climates/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Description,CreatedDate")] Todo todo)
+        public async Task<IActionResult> Create([Bind("ClimateID,Name,Description,Rain_in_Winter,Rain_during_Growing_Season,Rain_during_Harvest,Temp_in_Winter,Temp_during_Growing_Season,Temp_Continentality,Temp_Diurnal,Vintage_Variation,Proximity_to_Large_Bodies_of_Water")] Climate climate)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(todo);
+                _context.Add(climate);
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            return View(todo);
+            return View(climate);
         }
 
-        // GET: Todos/Edit/5
+        // GET: Climates/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -72,15 +72,15 @@ namespace DotNetCoreSqlDb.Controllers
                 return NotFound();
             }
 
-            var todo = await _context.Todo.SingleOrDefaultAsync(m => m.ID == id);
-            if (todo == null)
+            var climate = await _context.Climate.SingleOrDefaultAsync(m => m.ClimateID == id);
+            if (climate == null)
             {
                 return NotFound();
             }
-            return View(todo);
+            return View(climate);
         }
 
-        // POST: Todos/Edit/5
+        // POST: Climates/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
