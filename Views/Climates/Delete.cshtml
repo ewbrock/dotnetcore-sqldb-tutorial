@@ -1,1 +1,89 @@
+@page
+@model WineTableMaint.Pages.Climates.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Climate</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Climate.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Climate.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Climate.Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Climate.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Climate.Rain_in_Winter)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Climate.Rain_in_Winter)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Climate.Rain_during_Growing_Season)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Climate.Rain_during_Growing_Season)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Climate.Rain_during_Harvest)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Climate.Rain_during_Harvest)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Climate.Temp_in_Winter)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Climate.Temp_in_Winter)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Climate.Temp_during_Growing_Season)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Climate.Temp_during_Growing_Season)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Climate.Temp_Continentality)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Climate.Temp_Continentality)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Climate.Temp_Diurnal)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Climate.Temp_Diurnal)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Climate.Vintage_Variation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Climate.Vintage_Variation)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Climate.Proximity_to_Large_Bodies_of_Water)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Climate.Proximity_to_Large_Bodies_of_Water)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Climate.ClimateID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>
 
