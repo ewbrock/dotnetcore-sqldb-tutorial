@@ -32,7 +32,7 @@ namespace DotNetCoreSqlDb.Controllers
                 return NotFound();
             }
 
-            var climate = await _context.Todo
+            var climate = await _context.Climate
                 .SingleOrDefaultAsync(m => m.ClimateID == id);
             if (climate == null)
             {
@@ -85,9 +85,9 @@ namespace DotNetCoreSqlDb.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Description,CreatedDate")] Todo todo)
+        public async Task<IActionResult> Edit(int id, [Bind("ClimateID,Name,Description,Rain_in_Winter,Rain_during_Growing_Season,Rain_during_Harvest,Temp_in_Winter,Temp_during_Growing_Season,Temp_Continentality,Temp_Diurnal,Vintage_Variation,Proximity_to_Large_Bodies_of_Water")] Climate climate)
         {
-            if (id != todo.ID)
+            if (id != climate.ClimateID)
             {
                 return NotFound();
             }
@@ -96,12 +96,12 @@ namespace DotNetCoreSqlDb.Controllers
             {
                 try
                 {
-                    _context.Update(todo);
+                    _context.Update(climate);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!TodoExists(todo.ID))
+                    if (!ClimateExists(climate.ClimateID))
                     {
                         return NotFound();
                     }
@@ -112,10 +112,10 @@ namespace DotNetCoreSqlDb.Controllers
                 }
                 return RedirectToAction("Index");
             }
-            return View(todo);
+            return View(climate);
         }
 
-        // GET: Todos/Delete/5
+        // GET: Climates/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -123,30 +123,30 @@ namespace DotNetCoreSqlDb.Controllers
                 return NotFound();
             }
 
-            var todo = await _context.Todo
-                .SingleOrDefaultAsync(m => m.ID == id);
-            if (todo == null)
+            var climate = await _context.Climate
+                .SingleOrDefaultAsync(m => m.ClimateID == id);
+            if (climate == null)
             {
                 return NotFound();
             }
 
-            return View(todo);
+            return View(climate);
         }
 
-        // POST: Todos/Delete/5
+        // POST: Climates/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var todo = await _context.Todo.SingleOrDefaultAsync(m => m.ID == id);
-            _context.Todo.Remove(todo);
+            var climate = await _context.Climate.SingleOrDefaultAsync(m => m.ClimateID == id);
+            _context.Climate.Remove(climate);
             await _context.SaveChangesAsync();
             return RedirectToAction("Index");
         }
 
-        private bool TodoExists(int id)
+        private bool ClimateExists(int id)
         {
-            return _context.Todo.Any(e => e.ID == id);
+            return _context.Climate.Any(e => e.ClimateID == id);
         }
     }
 }
