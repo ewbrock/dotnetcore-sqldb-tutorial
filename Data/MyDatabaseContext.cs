@@ -9,7 +9,7 @@ namespace DotNetCoreSqlDb.Models
 {
     public class WineContext : DbContext
     {
-        public MyDatabaseContext (DbContextOptions<MyDatabaseContext> options)
+        public WineContext (DbContextOptions<WineContext> options)
             : base(options)
         {
         }
