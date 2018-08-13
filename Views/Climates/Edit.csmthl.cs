@@ -6,15 +6,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using WineTableMaint.Models;
+using DotNetCoreSqlDb.Models;
 
-namespace WineTableMaint.Pages.Climates
+namespace DotNetCoreSqlDb.Pages.Climates
 {
     public class EditModel : PageModel
     {
-        private readonly WineTableMaint.Models.WineContext _context;
+        private readonly DotNetCoreSqlDb.Models.WineContext _context;
 
-        public EditModel(WineTableMaint.Models.WineContext context)
+        public EditModel(DotNetCoreSqlDb.Models.WineContext context)
         {
             _context = context;
         }
