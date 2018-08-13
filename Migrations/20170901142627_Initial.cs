@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
-using WineTableMaint.Models;
+using DotNetCoreSqlDb.Models;
 
-namespace WineTableMaint.Migrations
+namespace DotNetCoreSqlDb.Migrations
 {
     public partial class Initial : Migration
     {
