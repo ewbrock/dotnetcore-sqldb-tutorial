@@ -27,7 +27,7 @@ namespace DotNetCoreSqlDb
             // Add framework services.
             services.AddMvc();
 
-            services.AddDbContext<MyDatabaseContext>(options =>
+            services.AddDbContext<WineContext>(options =>
                     options.UseSqlite("Data Source=localdatabase.db"));
         }
 
