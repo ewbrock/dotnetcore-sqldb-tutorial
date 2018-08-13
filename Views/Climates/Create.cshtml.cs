@@ -11,9 +11,9 @@ namespace WineTableMaint.Pages.Climates
 {
     public class CreateModel : PageModel
     {
-        private readonly WineTableMaint.Models.WineContext _context;
+        private readonly WineTableMaint.Models.WineTableMaint _context;
 
-        public CreateModel(WineTableMaint.Models.WineContext context)
+        public CreateModel(WineTableMaint.Models.WineTableMaint context)
         {
             _context = context;
         }
