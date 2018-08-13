@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
-using WineTableMaint.Models;
 
-namespace WineTableMaint.Models
+namespace DotNetCoreSqlDb.Models
 {
     public class Climate
     {
