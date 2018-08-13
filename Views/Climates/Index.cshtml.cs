@@ -11,9 +11,9 @@ namespace WineTableMaint.Pages.Climates
 {
     public class IndexModel : PageModel
     {
-        private readonly WineTableMaint.Models.WineContext _context;
+        private readonly WineTableMaint.Models.WineTableMaint _context;
 
-        public IndexModel(WineTableMaint.Models.WineContext context)
+        public IndexModel(WineTableMaint.Models.WineTableMaint context)
         {
             _context = context;
         }
