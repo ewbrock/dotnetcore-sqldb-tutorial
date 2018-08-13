@@ -8,9 +8,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
-using DotNetCoreSqlDb.Models;
+using WineTableMaint.Models;
 
-namespace DotNetCoreSqlDb
+namespace WineTableMaint
 {
     public class Startup
     {
