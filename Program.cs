@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using WineTableMaint.Models
+using WineTableMaint.Models;
 
 namespace WineTableMaint
 {
