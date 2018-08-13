@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
-using WineTableMaint.Models
+using WineTableMaint.Models;
 
 namespace WineTableMaint.Migrations
 {
