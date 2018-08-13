@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using WineTableMaint.Models;
+using DotNetCoreSqlDb.Models;
 
-namespace WineTableMaint.Controllers
+namespace DotNetCoreSqlDb.Controllers
 {
     public class ClimatesController : Controller
     {
