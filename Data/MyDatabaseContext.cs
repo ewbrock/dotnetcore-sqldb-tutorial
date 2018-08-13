@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using WineTableMaint.Models
 
-namespace DotNetCoreSqlDb.Models
+namespace WineTableMaint.Models
 {
     public class MyDatabaseContext : DbContext
     {
@@ -13,6 +14,6 @@ namespace DotNetCoreSqlDb.Models
         {
         }
 
-        public DbSet<DotNetCoreSqlDb.Models.Climate> Climate { get; set; }
+        public DbSet<WineTableMaint.Models.Climate> Climate { get; set; }
     }
 }
