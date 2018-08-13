@@ -11,9 +11,9 @@ namespace DotNetCoreSqlDb.Controllers
 {
     public class ClimatesController : Controller
     {
-        private readonly MyDatabaseContext _context;
+        private readonly WineContext _context;
 
-        public ClimatesController(MyDatabaseContext context)
+        public ClimatesController(WineContext context)
         {
             _context = context;    
         }
