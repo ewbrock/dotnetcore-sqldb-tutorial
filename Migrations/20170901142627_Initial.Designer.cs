@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
-using DotNetCoreSqlDb.Models;
+using WineTableMaint.Models;
 
-namespace DotNetCoreSqlDb.Migrations
+namespace WineTableMaint.Migrations
 {
     [DbContext(typeof(MyDatabaseContext))]
     [Migration("20170901142627_Initial")]
