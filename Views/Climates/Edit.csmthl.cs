@@ -12,9 +12,9 @@ namespace WineTableMaint.Pages.Climates
 {
     public class EditModel : PageModel
     {
-        private readonly WineTableMaint.Models.WineContext _context;
+        private readonly WineTableMaint.Models.WineTableMaint _context;
 
-        public EditModel(WineTableMaint.Models.WineContext context)
+        public EditModel(WineTableMaint.Models.WineTableMaint context)
         {
             _context = context;
         }
