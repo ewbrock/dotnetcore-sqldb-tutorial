@@ -5,15 +5,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using WineTableMaint.Models;
+using DotNetCoreSqlDb.Models;
 
-namespace WineTableMaint.Pages.Climates
+namespace DotNetCoreSqlDb.Pages.Climates
 {
     public class IndexModel : PageModel
     {
-        private readonly WineTableMaint.Models.WineContext _context;
+        private readonly DotNetCoreSqlDb.Models.WineContext _context;
 
-        public IndexModel(WineTableMaint.Models.WineContext context)
+        public IndexModel(DotNetCoreSqlDb.Models.WineContext context)
         {
             _context = context;
         }
