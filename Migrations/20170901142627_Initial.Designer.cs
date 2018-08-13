@@ -7,7 +7,7 @@ using DotNetCoreSqlDb.Models;
 
 namespace DotNetCoreSqlDb.Migrations
 {
-    [DbContext(typeof(MyDatabaseContext))]
+    [DbContext(typeof(WineContext))]
     [Migration("20170901142627_Initial")]
     partial class Initial
     {
