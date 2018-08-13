@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using WineTableMaint.Models;
 
-namespace WineTableMaint.Controllers
+namespace DotNetCoreSqlDb.Controllers
 {
     public class HomeController : Controller
     {
