@@ -11,9 +11,9 @@ namespace WineTableMaint.Pages.Climates
 {
     public class DeleteModel : PageModel
     {
-        private readonly WineTableMaint.Models.WineTableMaintContext _context;
+        private readonly WineTableMaint.Models.WineContext _context;
 
-        public DeleteModel(WineTableMaint.Models.WineTableMaintContext context)
+        public DeleteModel(WineTableMaint.Models.WineContext context)
         {
             _context = context;
         }
