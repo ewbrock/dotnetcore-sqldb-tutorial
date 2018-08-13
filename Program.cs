@@ -5,9 +5,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using WineTableMaint.Models;
 
-namespace WineTableMaint
+namespace DotNetCoreSqlDb
 {
     public class Program
     {
